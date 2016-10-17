@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="makerPoll">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="refresh" content="8">
+        <meta http-equiv="X-UA-Compatible">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Maker Poll</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-      BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+        <script src="js/app.js"></script>
+    </head>
+    <body>
+        <div class="page-header">
+        <h1 class="text-center">Welcome to Maker Poll</h1>
+        <h6 class="text-center">Please note that we neither support Politics nor any of these politicians</h6>
+        </div>
+        <div class="row" ng-controller="Result">
+            <div class="col-md-6">
+                <div class="thumbnail">
+                    <img src="hillary.jpg">
+                    <div class="caption">
+                    <h3 ng-repeat="data in poll" class="text-center">{{ data.hillary }}</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="thumbnail">
+                    <img src="trump.jpg">
+                    <div class="caption">
+                    <h3 ng-repeat="data in poll" class="text-center">{{ data.trump }}</h3>
+                    </div>
+                </div>
+            </div>        </div>
+    </body>
+</html>
